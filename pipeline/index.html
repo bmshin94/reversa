@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -623,6 +623,17 @@
     <span class="md-ellipsis">
       
         Independent agents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-pipeline-without-stops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the pipeline without stops
       
     </span>
   </a>
@@ -1813,7 +1824,7 @@
   <span class="md-ellipsis">
     
   
-    Translators N8N->Specs->Python
+    Bug Agents
   
 
     
@@ -1826,6 +1837,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bug Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Quality Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code Quality Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translators N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2062,6 +2243,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-the-pipeline-without-stops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the pipeline without stops
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2181,8 +2373,18 @@
 <td><strong>Design System</strong></td>
 <td>When CSS files, themes, or interface screenshots are available</td>
 </tr>
+<tr>
+<td><strong>Soul Extractor</strong></td>
+<td>Right after the Scout, for a single executive Spec (<code>soul.md</code>) with purpose, core entities and founding decisions</td>
+</tr>
 </tbody>
 </table>
+<hr />
+<h2 id="running-the-pipeline-without-stops">Running the pipeline without stops<a class="headerlink" href="#running-the-pipeline-without-stops" title="Permanent link">&para;</a></h2>
+<p><code>/reversa-autonomous</code> runs these same 5 phases, with the same agents, the same checkpoints and the same confidence scale. The difference is <em>when</em> it asks you things.</p>
+<p>The normal flow spreads its questions along the way: installation data at the start, documentation level after the Scout, spec organization before the Writer. The autonomous mode concentrates all of them in a <strong>single interview at the beginning</strong>, skipping anything already answered in <code>.reversa/state.json</code> or <code>.reversa/config.toml</code>. After that interview it runs to the end, stopping only for a closed list of situations that genuinely need a human.</p>
+<p>It was designed for unattended sessions with automatic tool approval (Claude Code YOLO mode or equivalent), so the guardrails are stricter than usual: writes stay inside <code>.reversa/</code> and the output folder, and no destructive or outward-facing command (delete, <code>git push</code>, publish, install dependencies) is ever run on its own. Anything ambiguous outside the Reversa folders is left alone and reported in the final summary.</p>
+<p>Checkpoints are saved exactly as in the normal flow, so an interrupted autonomous run can be resumed with either <code>/reversa</code> or <code>/reversa-autonomous</code>.</p>
 
 
 
@@ -2247,7 +2449,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -449,6 +449,28 @@
     <span class="md-ellipsis">
       
         Activate Reversa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-entry-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the entry command
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unattended-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unattended mode
       
     </span>
   </a>
@@ -1813,7 +1835,7 @@
   <span class="md-ellipsis">
     
   
-    Translators N8N->Specs->Python
+    Bug Agents
   
 
     
@@ -1826,6 +1848,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bug Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Quality Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code Quality Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translators N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1997,6 +2189,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#choosing-the-entry-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the entry command
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unattended-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unattended mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-happens-when-you-activate" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2099,31 +2313,95 @@
 </div>
 <p>That's it. Reversa takes control and coordinates the entire analysis from there.</p>
 <hr />
+<h2 id="choosing-the-entry-command">Choosing the entry command<a class="headerlink" href="#choosing-the-entry-command" title="Permanent link">&para;</a></h2>
+<p><code>/reversa</code> is the entry point for analyzing an existing system, but it is not the only workflow:</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyze an existing legacy and produce specs</td>
+<td><code>/reversa</code></td>
+</tr>
+<tr>
+<td>Same analysis, end to end, with no intermediate stops</td>
+<td><code>/reversa-autonomous</code></td>
+</tr>
+<tr>
+<td>Start a brand new project from a one-line idea</td>
+<td><code>/reversa-new</code> (add <code>expresso</code> to go all the way to code)</td>
+</tr>
+<tr>
+<td>Evolve the system one feature at a time, spec to code</td>
+<td><code>/reversa-forward</code></td>
+</tr>
+<tr>
+<td>Converge a delivered feature back into the extraction</td>
+<td><code>/reversa-sync</code></td>
+</tr>
+<tr>
+<td>Rebuild the legacy on a modern stack</td>
+<td><code>/reversa-migrate</code></td>
+</tr>
+<tr>
+<td>Improve the internal structure without changing observable behavior</td>
+<td><code>/reversa-refactor</code></td>
+</tr>
+<tr>
+<td>Render the extracted knowledge as an HTML mini-site</td>
+<td><code>/reversa-docs</code></td>
+</tr>
+<tr>
+<td>Register and fix defects with causal traceability</td>
+<td><code>/reversa-debugger</code>, <code>/reversa-debugger-fix</code></td>
+</tr>
+<tr>
+<td>Estimate effort, size and price from the specs</td>
+<td><code>/reversa-pricing-profile</code>, <code>/reversa-pricing-size</code>, <code>/reversa-pricing-estimate</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="unattended-mode">Unattended mode<a class="headerlink" href="#unattended-mode" title="Permanent link">&para;</a></h2>
+<p>If you want the analysis to run without you in front of the terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/reversa-autonomous
+</code></pre></div>
+<p>It runs the exact same agents and phases as <code>/reversa</code>, but concentrates every question in a <strong>single interview at the start</strong> (installation data, documentation level, spec organization) and skips whatever is already answered in <code>.reversa/state.json</code>. After the interview it goes to the end, pausing only for the closed list of situations that genuinely require a human.</p>
+<p>The same idea exists on the greenfield side: <code>/reversa-new expresso "&lt;your idea&gt;"</code> goes from the idea to implemented code without stopping, chaining into the forward cycle once the specs are done.</p>
+<div class="admonition warning">
+<p class="admonition-title">Made for sessions with automatic approval</p>
+<p>These modes are meant for environments where tools are auto-approved (Claude Code YOLO mode or equivalent). Since nobody is approving each action, the guardrails are stricter: writes stay inside <code>.reversa/</code> and the output folders, and no destructive or outward-facing command (delete, <code>git push</code>, publish, install dependencies) is ever run on its own. Even so, back up your project before starting, as recommended on the <a href="../">home page</a>.</p>
+</div>
+<hr />
 <h2 id="what-happens-when-you-activate">What happens when you activate<a class="headerlink" href="#what-happens-when-you-activate" title="Permanent link">&para;</a></h2>
 <p>Reversa checks whether an analysis is already in progress:</p>
 <p><strong>First time:</strong> it creates a personalized exploration plan for your project, presents it to you for approval, and starts the analysis at phase 1.</p>
 <p><strong>Resumed session:</strong> it reads the checkpoint saved in <code>.reversa/state.json</code> and continues exactly where it left off. It doesn't matter if you closed the editor, restarted your machine, or left it sleeping for three days.</p>
 <hr />
 <h2 id="typical-flow-of-a-complete-analysis">Typical flow of a complete analysis<a class="headerlink" href="#typical-flow-of-a-complete-analysis" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You type /reversa
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        ↓
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Reversa creates the exploration plan
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        ↓
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>You review and approve the plan
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        ↓
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Scout maps the project surface
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        ↓
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Reversa presents the Scout summary and you choose the documentation level
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        ↓
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Archaeologist analyzes module by module
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        ↓
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Detective and Architect interpret what was found
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        ↓
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Writer generates specifications (one at a time, with your approval)
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        ↓
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Reviewer reviews everything and raises validation questions
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        ↓
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>Specifications ready in _reversa_sdd/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You type /reversa
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        ↓
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Reversa creates the exploration plan
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        ↓
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>You review and approve the plan
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        ↓
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Scout maps the project surface
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        ↓
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Reversa presents the Scout summary and you choose the documentation level
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        ↓
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Archaeologist analyzes module by module
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        ↓
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Detective and Architect interpret what was found
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        ↓
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Writer generates specifications (one at a time, with your approval)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        ↓
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>Reviewer reviews everything and raises validation questions
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        ↓
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Specifications ready in _reversa_sdd/
 </code></pre></div>
 <p>The process is incremental and conversational. You don't need to be present all the time: Reversa notifies you when it needs you.</p>
 <hr />
@@ -2192,9 +2470,9 @@
 <hr />
 <h2 id="activating-a-specific-agent-manually">Activating a specific agent manually<a class="headerlink" href="#activating-a-specific-agent-manually" title="Permanent link">&para;</a></h2>
 <p>If you want to run an agent standalone, without going through the orchestrator:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/reversa-scout
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/reversa-detective
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>/reversa-data-master
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/reversa-scout
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/reversa-detective
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>/reversa-data-master
 </code></pre></div>
 <p>Useful when you already have an analysis in progress and want to run a specific agent for a particular reason.</p>
 
@@ -2261,7 +2539,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

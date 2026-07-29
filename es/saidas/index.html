@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1689,7 +1689,7 @@
   <span class="md-ellipsis">
     
   
-    Traductores N8N->Specs->Python
+    Agentes de Bugs
   
 
     
@@ -1702,6 +1702,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Bugs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentes de Calidad de Código
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Calidad de Código
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traductores N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1832,6 +2002,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adendas-mantener-la-extraccion-al-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adendas: mantener la extracción al día
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trazabilidad" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1953,6 +2134,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adendas-mantener-la-extraccion-al-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adendas: mantener la extracción al día
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trazabilidad" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2046,10 +2238,24 @@
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├── ui/                       # Specs de interfaz (Visor)
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>├── database/                 # Specs de base de datos (Data Master)
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>├── design-system/            # Tokens de diseño (Design System)
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>└── traceability/
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    ├── spec-impact-matrix.md # Qué spec impacta a cuál — completo+
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    └── code-spec-matrix.md   # Archivo de código a spec correspondiente — completo+
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>├── addenda/                  # Adendas post-entrega (reversa-sync)
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│   └── [NNN]-[feature].md    # Una por feature entregada por /reversa-coding
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>└── traceability/
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    ├── spec-impact-matrix.md # Qué spec impacta a cuál — completo+
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    ├── code-spec-matrix.md   # Archivo de código a spec correspondiente — completo+
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    └── bugs.md               # Matriz BUG ↔ SPEC (reversa-debugger-graph)
 </code></pre></div>
+<hr />
+<h2 id="adendas-mantener-la-extraccion-al-dia">Adendas: mantener la extracción al día<a class="headerlink" href="#adendas-mantener-la-extraccion-al-dia" title="Permanent link">&para;</a></h2>
+<p>Una extracción es una fotografía del sistema en un momento dado. En cuanto se entrega una feature del forward, el código sigue adelante y <code>architecture.md</code> y <code>domain.md</code> pasan a describir un sistema que ya no existe.</p>
+<p><code>/reversa-sync</code> cierra ese intervalo sin tocar los artefactos originales. Destila la feature entregada en una adenda dentro de <code>addenda/</code>, un archivo por feature, que contiene:</p>
+<ul>
+<li>una sección de <strong>vigencia</strong>, indicando que la adenda vale hasta la siguiente re-extracción completa</li>
+<li>el delta introducido por la feature, tomado de <code>legacy-impact.md</code> y <code>regression-watch.md</code></li>
+<li>punteros a las secciones de la extracción que quedaron desfasadas, para que quien las lea sepa que también debe leer la adenda</li>
+</ul>
+<p>La siguiente ejecución completa de <code>/reversa</code> absorbe el cambio y marca la adenda como superada. Nada de la extracción se reescribe en su lugar.</p>
 <hr />
 <h2 id="trazabilidad">Trazabilidad<a class="headerlink" href="#trazabilidad" title="Permanent link">&para;</a></h2>
 <p><strong><code>traceability/code-spec-matrix.md</code>:</strong> mapea cada archivo de código a su spec correspondiente, con el nivel de cobertura.</p>
@@ -2121,7 +2327,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1396,6 +1396,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#reversa-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reversa-sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversa-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1911,7 +1922,7 @@
   <span class="md-ellipsis">
     
   
-    Translators N8N->Specs->Python
+    Bug Agents
   
 
     
@@ -1924,6 +1935,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bug Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Quality Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code Quality Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translators N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2206,6 +2387,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#reversa-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reversa-sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversa-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2281,7 +2473,7 @@
 <hr />
 <h2 id="when-to-use">When to use<a class="headerlink" href="#when-to-use" title="Permanent link">&para;</a></h2>
 <p>You already ran <code>/reversa</code> and have specs in <code>_reversa_sdd/</code>. Now you want to evolve the system: a new feature, an extension, a fix that needs a delta description before it becomes code. Forward takes a free-form sentence ("I want users to export their invoices as PDF") and walks it down the funnel until the file changes are on disk.</p>
-<p><code>/reversa-coding</code> refuses to run without at least <code>_reversa_sdd/architecture.md</code> and <code>_reversa_sdd/domain.md</code>. Without those, the legacy/code bridge would be hollow and Forward would degrade into a generic scaffolding tool.</p>
+<p><code>/reversa-coding</code> requires a context anchor in <code>_reversa_sdd/</code>: either the legacy extraction (<code>architecture.md</code> + <code>domain.md</code>, from <code>/reversa</code>) or the greenfield artifacts (<code>prd.md</code> + at least one spec in <code>sdd/</code>, from <code>/reversa-new</code>). Without any anchor, it refuses to run: the code bridge would be hollow and Forward would degrade into a generic scaffolding tool.</p>
 <hr />
 <h2 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/reversa-forward         (orchestrator, detects current stage and suggests the next skill)
@@ -2308,7 +2500,10 @@
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        ▼
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>/reversa-coding
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        │     actions.md  →  code, plus legacy-impact.md
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                                      and regression-watch.md
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        │                             and regression-watch.md
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        ▼
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>/reversa-sync            (optional)
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>              delivery  →  _reversa_sdd/addenda/&lt;feature&gt;.md
 </code></pre></div>
 <p><code>/reversa-forward</code> is the optional entry point for the cycle: it looks at the current state and tells you which skill to run next. Handy when you do not remember where you stopped.
 <code>/reversa-principles</code> and <code>/reversa-resume</code> run outside this linear flow. The first manages durable project rules; the second swaps the active feature with one paused on the side.</p>
@@ -2419,6 +2614,12 @@
 <td></td>
 </tr>
 <tr>
+<td><code>reversa-sync</code></td>
+<td>sync</td>
+<td><code>_reversa_sdd/addenda/&lt;feature&gt;.md</code></td>
+<td><code>legacy-impact.md</code>, <code>regression-watch.md</code>, <code>requirements.md</code>, <code>progress.jsonl</code>, extraction artifacts</td>
+</tr>
+<tr>
 <td><code>reversa-principles</code></td>
 <td>principles</td>
 <td><code>.reversa/principles.md</code>, <code>principles-impact-YYYYMMDD.md</code></td>
@@ -2446,6 +2647,8 @@
 <p>Read-only cross-check between requirements, roadmap and actions. Findings are reported with severity (CRITICAL, HIGH, MEDIUM, LOW), grouped along four axes: coverage, consistency, coherence with the legacy (<code>_reversa_sdd/domain.md</code>, <code>architecture.md</code>), and sanity of the actions graph (no cycles, parallel tasks don't share files). The skill never edits the analyzed documents, even if the user asks.</p>
 <h3 id="reversa-coding"><code>reversa-coding</code><a class="headerlink" href="#reversa-coding" title="Permanent link">&para;</a></h3>
 <p>The executor. Walks <code>actions.md</code> phase by phase, respects <code>[//]</code> parallelism and dependencies, flips checkboxes from <code>[ ]</code> to <code>[X]</code> only on success, and appends one line per action to <code>progress.jsonl</code>. On completion (full or partial) it writes <code>legacy-impact.md</code> (which legacy files were touched) and <code>regression-watch.md</code> (invariants that must hold on the next Reversa extraction).</p>
+<h3 id="reversa-sync"><code>reversa-sync</code><a class="headerlink" href="#reversa-sync" title="Permanent link">&para;</a></h3>
+<p>The convergence step, optional and run after coding. Between a delivery and the next full <code>/reversa</code> re-extraction, <code>_reversa_sdd/</code> drifts: the code moved, but <code>architecture.md</code> and <code>domain.md</code> still describe the previous system. Sync distills the delivered feature into an addendum under <code>_reversa_sdd/addenda/</code>, so the extraction keeps representing the system as it is today. It detects the scenario on its own (legacy or greenfield), offers a menu instead of deciding when <code>actions.md</code> still has open actions, and never edits the original artifacts, it only points at the sections that drifted. The next full re-extraction marks the addendum as superseded.</p>
 <h3 id="reversa-principles"><code>reversa-principles</code><a class="headerlink" href="#reversa-principles" title="Permanent link">&para;</a></h3>
 <p>Manages durable project rules in <code>.reversa/principles.md</code>, separated from feature requirements. Principles are rare (typically less than once a month), use roman numerals (I, II, III, ...) that are never recycled, and changes are tracked in a history section. When a principle changes, the skill emits an impact report (<code>principles-impact-YYYYMMDD.md</code>) suggesting template adjustments. The human applies them, the skill never auto-rewrites templates.</p>
 <h3 id="reversa-resume"><code>reversa-resume</code><a class="headerlink" href="#reversa-resume" title="Permanent link">&para;</a></h3>
@@ -2476,6 +2679,12 @@
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            └── cross-check.md          (reversa-audit)
 </code></pre></div>
 <p>The Code Forward Agents never touch the legacy code unsupervised; that only happens inside <code>/reversa-coding</code>, and even then the skill leaves the two trails above so the next Discovery run can detect any drift.</p>
+<p><code>/reversa-sync</code> is the only skill in this Team that writes outside <code>_reversa_forward/</code>, and it writes to exactly one place:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>_reversa_sdd/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>└── addenda/
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    └── &lt;NNN&gt;-&lt;short-name&gt;.md    (one addendum per delivered feature)
+</code></pre></div>
+<p>The original extraction artifacts are never edited. The addendum carries a validity section and points at the sections of <code>architecture.md</code>, <code>domain.md</code> and the specs that drifted, until the next full re-extraction supersedes it.</p>
 <hr />
 <h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
 <p>Each skill applies the matching hook entries from <code>.reversa/hooks.yml</code>, in two slots: <code>before-&lt;stage&gt;</code> and <code>after-&lt;stage&gt;</code> (e.g. <code>before-plan</code>, <code>after-coding</code>). Hooks marked <code>optional: true</code> show up as suggested commands; <code>optional: false</code> blocks the skill until executed. The <code>condition</code> field is recorded but never auto-evaluated, the user owns that decision.</p>
@@ -2543,7 +2752,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

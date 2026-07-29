@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1795,7 +1795,7 @@
   <span class="md-ellipsis">
     
   
-    Tradutores N8N->Specs->Python
+    Agentes de Bugs
   
 
     
@@ -1808,6 +1808,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Bugs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentes de Qualidade de Código
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Qualidade de Código
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tradutores N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2052,7 +2222,12 @@
 <p>Ative com:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/reversa-new
 </code></pre></div>
-<p>O orquestrador coleta o brief, conduz os quatro agentes funcionais em ordem fixa, salva checkpoint entre cada um e pede <code>CONTINUAR</code> antes de avançar. Se a sessão for interrompida, basta digitar <code>/reversa-new</code> de novo: ele lê <code>state.json#newproject_progress</code> e retoma exatamente de onde parou.</p>
+<p>O <code>/reversa-new</code> tem dois modos de execução:</p>
+<ul>
+<li><strong>Guiado</strong> (padrão): o orquestrador coleta o brief, conduz os quatro agentes funcionais em ordem fixa, salva checkpoint entre cada um e pede <code>CONTINUAR</code> antes de avançar. Termina nas specs SDD, com handoff para <code>/reversa-forward</code>.</li>
+<li><strong>Expresso</strong>: ative com <code>/reversa-new expresso "&lt;sua ideia&gt;"</code> ou escolha no menu inicial. Todas as perguntas são concentradas em uma entrevista única no início; depois do <code>INICIAR</code>, o pipeline roda sem paradas e, ao concluir as specs, emenda automaticamente no ciclo forward (<code>requirements → plan → to-do → coding</code>) até o código implementado. Dúvidas que surgirem no caminho são registradas com selo 🟡 para revisão posterior, sem interromper o fluxo.</li>
+</ul>
+<p>Se a sessão for interrompida, em qualquer modo, basta digitar <code>/reversa-new</code> de novo: ele lê <code>state.json#newproject_progress</code> e retoma exatamente de onde parou, respeitando o modo salvo.</p>
 <hr />
 <h2 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/reversa-new              (orquestrador)
@@ -2069,9 +2244,15 @@
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>       ▼ CONTINUAR
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>/reversa-spec-sdd         → _reversa_sdd/sdd/&lt;componente&gt;.md
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>       │
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>       ▼
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>handoff: sugere /reversa-forward
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>       ├── guiado: handoff, sugere /reversa-forward
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>       │
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>       ▼ expresso: continua sem parar
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>/reversa-requirements → /reversa-plan → /reversa-to-do → /reversa-coding
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>       │
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>       ▼
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>código implementado em _reversa_forward/&lt;NNN&gt;-&lt;feature&gt;/
 </code></pre></div>
+<p>No modo expresso as pausas <code>CONTINUAR</code> do diagrama não existem: a única confirmação é o <code>INICIAR</code> da entrevista inicial.</p>
 <p>O agente Spec SDD é uma versão <strong>vendored</strong> da skill global <code>sdd-spec</code>, adaptada para viver dentro do Reversa: lê <code>prd.md</code>, escreve em <code>_reversa_sdd/sdd/</code>, marca cada artefato com selo 🟡 (planejado) e, ao concluir, faz handoff para o pipeline Forward.</p>
 <hr />
 <h2 id="onde-os-artefatos-ficam">Onde os artefatos ficam<a class="headerlink" href="#onde-os-artefatos-ficam" title="Permanent link">&para;</a></h2>
@@ -2085,7 +2266,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    └── sdd/
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        └── &lt;componente&gt;.md      (Spec SDD)
 </code></pre></div>
-<p>O estado do orquestrador fica em <code>.reversa/state.json</code> sob a chave <code>newproject_progress</code>, com <code>stage</code>, <code>started_at</code>, <code>last_checkpoint_at</code>, <code>completed_stages</code> e o <code>brief</code> truncado.</p>
+<p>O estado do orquestrador fica em <code>.reversa/state.json</code> sob a chave <code>newproject_progress</code>, com <code>mode</code> (guiado ou expresso), <code>stage</code>, <code>started_at</code>, <code>last_checkpoint_at</code>, <code>completed_stages</code> e o <code>brief</code> truncado. No modo expresso, <code>stage</code> também percorre os estágios <code>forward-requirements</code>, <code>forward-plan</code>, <code>forward-todo</code> e <code>forward-coding</code>, e a feature gerada vive em <code>_reversa_forward/</code>.</p>
 <hr />
 <h2 id="re-execucao">Re-execução<a class="headerlink" href="#re-execucao" title="Permanent link">&para;</a></h2>
 <p>Quando o pipeline já está em andamento e você digita <code>/reversa-new</code> de novo, o orquestrador detecta o <code>stage</code> salvo e oferece quatro opções:</p>
@@ -2166,7 +2347,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

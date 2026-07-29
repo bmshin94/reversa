@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1773,7 +1773,7 @@
   <span class="md-ellipsis">
     
   
-    Tradutores N8N->Specs->Python
+    Agentes de Bugs
   
 
     
@@ -1786,6 +1786,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Bugs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentes de Qualidade de Código
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Qualidade de Código
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tradutores N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2023,6 +2193,9 @@
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        │
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        ▼
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>/reversa-coding          (executa actions.md em código)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        │
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        ▼
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>/reversa-sync            (opcional, converge a entrega em _reversa_sdd/addenda/)
 </code></pre></div>
 <p><code>/reversa-forward</code> é o ponto de entrada opcional do ciclo: olha o estado atual e diz qual o próximo skill. Útil quando você não lembra onde parou.
 <code>/reversa-principles</code> roda separado, gerencia princípios duradouros do projeto.
@@ -2079,6 +2252,11 @@
 <td>Executa <code>actions.md</code> em código real, atualiza checkboxes e deixa <code>legacy-impact.md</code> e <code>regression-watch.md</code>.</td>
 </tr>
 <tr>
+<td><code>reversa-sync</code></td>
+<td>sync</td>
+<td>Opcional, depois do coding. Destila a feature entregue em um adendo em <code>_reversa_sdd/addenda/</code>, mantendo a extração representativa até a próxima re-extração. Não edita os artefatos originais.</td>
+</tr>
+<tr>
 <td><code>reversa-principles</code></td>
 <td>principles</td>
 <td>Cria e mantém princípios duradouros do projeto, separados dos requisitos de cada feature.</td>
@@ -2093,7 +2271,8 @@
 <hr />
 <h2 id="onde-os-artefatos-vao-parar">Onde os artefatos vão parar<a class="headerlink" href="#onde-os-artefatos-vao-parar" title="Permanent link">&para;</a></h2>
 <p>Cada feature mora em sua própria pasta sob <code>_reversa_forward/</code>. O caminho exato sai do campo <code>forward_folder</code> em <code>.reversa/state.json</code>.</p>
-<p>Os Code Forward Agents jamais tocam no código legado nem nos artefatos do Discovery Team. Consomem as saídas de Discovery e escrevem apenas dentro da pasta forward.</p>
+<p>Os Code Forward Agents jamais tocam no código legado sem supervisão, nem editam os artefatos do Discovery Team. Consomem as saídas de Discovery e escrevem dentro da pasta forward.</p>
+<p>A única exceção é o <code>/reversa-sync</code>, que escreve em <code>_reversa_sdd/addenda/</code> — uma pasta nova, criada só para os adendos pós-entrega. Os artefatos originais da extração (<code>architecture.md</code>, <code>domain.md</code>, specs) continuam intocados; o adendo apenas aponta para as seções que ficaram defasadas.</p>
 
 
 
@@ -2158,7 +2337,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

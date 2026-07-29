@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1773,7 +1773,7 @@
   <span class="md-ellipsis">
     
   
-    Traductores N8N->Specs->Python
+    Agentes de Bugs
   
 
     
@@ -1786,6 +1786,176 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Bugs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentes de Calidad de Código
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentes de Calidad de Código
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traductores N8N->Specs->Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2023,6 +2193,9 @@
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        │
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        ▼
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>/reversa-coding          (ejecuta actions.md como código)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        │
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        ▼
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>/reversa-sync            (opcional, converge la entrega en _reversa_sdd/addenda/)
 </code></pre></div>
 <p><code>/reversa-forward</code> es el punto de entrada opcional del ciclo: observa el estado actual y dice cuál es el próximo skill. Útil cuando no recuerdas dónde te detuviste.
 <code>/reversa-principles</code> corre separado, gestiona principios duraderos del proyecto.
@@ -2079,6 +2252,11 @@
 <td>Ejecuta <code>actions.md</code> como código real, actualiza checkboxes y deja <code>legacy-impact.md</code> y <code>regression-watch.md</code>.</td>
 </tr>
 <tr>
+<td><code>reversa-sync</code></td>
+<td>sync</td>
+<td>Opcional, después del coding. Destila la feature entregada en una adenda en <code>_reversa_sdd/addenda/</code>, manteniendo la extracción representativa hasta la siguiente re-extracción. No edita los artefactos originales.</td>
+</tr>
+<tr>
 <td><code>reversa-principles</code></td>
 <td>principles</td>
 <td>Crea y mantiene principios duraderos del proyecto, separados de los requisitos de cada feature.</td>
@@ -2093,7 +2271,8 @@
 <hr />
 <h2 id="donde-caen-los-artefactos">Dónde caen los artefactos<a class="headerlink" href="#donde-caen-los-artefactos" title="Permanent link">&para;</a></h2>
 <p>Cada feature vive en su propia carpeta bajo <code>_reversa_forward/</code>. La ruta exacta se lee del campo <code>forward_folder</code> en <code>.reversa/state.json</code>.</p>
-<p>Los Code Forward Agents nunca tocan el código legado ni los artefactos del Discovery Team. Consumen las salidas de Discovery y escriben solo dentro de la carpeta forward.</p>
+<p>Los Code Forward Agents nunca tocan el código legado sin supervisión, ni editan los artefactos del Discovery Team. Consumen las salidas de Discovery y escriben dentro de la carpeta forward.</p>
+<p>La única excepción es <code>/reversa-sync</code>, que escribe en <code>_reversa_sdd/addenda/</code> — una carpeta nueva, creada solo para las adendas post-entrega. Los artefactos originales de la extracción (<code>architecture.md</code>, <code>domain.md</code>, specs) quedan intactos; la adenda solo apunta a las secciones que quedaron desfasadas.</p>
 
 
 
@@ -2158,7 +2337,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
