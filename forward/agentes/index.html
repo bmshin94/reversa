@@ -1401,10 +1401,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-sync" class="md-nav__link">
+  <a href="#9-add" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Sync
+        9. Add
       
     </span>
   </a>
@@ -1412,10 +1412,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-principles" class="md-nav__link">
+  <a href="#10-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Principles
+        10. Sync
       
     </span>
   </a>
@@ -1423,10 +1423,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-resume" class="md-nav__link">
+  <a href="#11-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Resume
+        11. Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Resume
       
     </span>
   </a>
@@ -2325,10 +2336,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-sync" class="md-nav__link">
+  <a href="#9-add" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Sync
+        9. Add
       
     </span>
   </a>
@@ -2336,10 +2347,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-principles" class="md-nav__link">
+  <a href="#10-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Principles
+        10. Sync
       
     </span>
   </a>
@@ -2347,10 +2358,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-resume" class="md-nav__link">
+  <a href="#11-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Resume
+        11. Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Resume
       
     </span>
   </a>
@@ -2449,7 +2471,15 @@
 </ul>
 <p><strong>Produces:</strong> source code, updated checkboxes in <code>actions.md</code>, <code>progress.jsonl</code>, <code>legacy-impact.md</code>, <code>regression-watch.md</code>.</p>
 <hr />
-<h2 id="9-sync">9. Sync<a class="headerlink" href="#9-sync" title="Permanent link">&para;</a></h2>
+<h2 id="9-add">9. Add<a class="headerlink" href="#9-add" title="Permanent link">&para;</a></h2>
+<p><strong>Command:</strong> <code>/reversa-add</code></p>
+<p>The amender. After a feature ships, small adjustments always follow: change a label, enlarge a title, add a loading state, fix a spacing. Running the whole forward pipeline for that is too expensive, and asking for it straight in the chat leaves the spec behind the code. <code>/reversa-add</code> closes that gap: it records the amendment in the active feature's spec and implements it in the same pass, in that order.</p>
+<p>Refusing is part of the job. Two gates run before anything is written. The <strong>size gate</strong> rejects anything that needs a new dependency, a schema or API contract change, a new public surface, or a change in an auth, permission or payment path. The <strong>belonging gate</strong> rejects anything that is not about what the active feature delivered, measured against the affected-files table in <code>legacy-impact.md</code> and the goal stated in <code>requirements.md</code>. Either gate trips and the skill points at <code>/reversa-requirements</code> without writing a line.</p>
+<p>Amendments get IDs <code>E001</code>, <code>E002</code>, ... and land in an <code>## Emendas</code> section. Actions it appends to <code>actions.md</code> are born closed <code>[X]</code>, so <code>/reversa-sync</code> never nags about work already finished.</p>
+<p><strong>Produces:</strong> entries in <code>## Emendas</code> in <code>requirements.md</code> and <code>actions.md</code>, source code, appended rows in <code>legacy-impact.md</code> and lines in <code>progress.jsonl</code>.</p>
+<p><strong>Requires:</strong> an active feature in <code>.reversa/active-requirements.json</code> and a <code>legacy-impact.md</code> from <code>/reversa-coding</code>.</p>
+<hr />
+<h2 id="10-sync">10. Sync<a class="headerlink" href="#10-sync" title="Permanent link">&para;</a></h2>
 <p><strong>Command:</strong> <code>/reversa-sync</code></p>
 <p>The convergence step. Between a forward delivery and the next full <code>/reversa</code> re-extraction, <code>_reversa_sdd/</code> goes stale: the code already moved, but <code>architecture.md</code> and <code>domain.md</code> still describe the previous system. Sync closes that gap by distilling the delivered feature into an <strong>addendum</strong>, so whoever reads the extraction next — human or agent — sees the system as it is today.</p>
 <p>It reads <code>legacy-impact.md</code> (required, the main source of the delta), <code>regression-watch.md</code>, <code>requirements.md</code> and <code>progress.jsonl</code>, and detects the scenario automatically: legacy (<code>architecture.md</code> + <code>domain.md</code> present) or greenfield (<code>prd.md</code> + specs in <code>sdd/</code>). If <code>actions.md</code> still has open <code>[ ]</code> actions, it does not decide alone: it offers a menu (partial sync now, or wait for <code>/reversa-coding</code> to finish).</p>
@@ -2457,12 +2487,12 @@
 <p><strong>Produces:</strong> <code>_reversa_sdd/addenda/&lt;feature-id&gt;-&lt;short-name&gt;.md</code>. Original extraction artifacts untouched.</p>
 <p><strong>Requires:</strong> an active feature in <code>.reversa/active-requirements.json</code> and a <code>legacy-impact.md</code> from <code>/reversa-coding</code>.</p>
 <hr />
-<h2 id="10-principles">10. Principles<a class="headerlink" href="#10-principles" title="Permanent link">&para;</a></h2>
+<h2 id="11-principles">11. Principles<a class="headerlink" href="#11-principles" title="Permanent link">&para;</a></h2>
 <p><strong>Command:</strong> <code>/reversa-principles</code></p>
 <p>Manages durable project rules in <code>.reversa/principles.md</code>, separated from feature requirements. Principles are rare (typically less than once a month), use roman numerals (I, II, III, ...) that are never recycled and changes are tracked in a history section. When a principle changes, the skill emits an impact report (<code>principles-impact-YYYYMMDD.md</code>) suggesting template adjustments. The human applies them, the skill never auto-rewrites templates.</p>
 <p><strong>Produces:</strong> <code>.reversa/principles.md</code> and <code>principles-impact-YYYYMMDD.md</code> on each change.</p>
 <hr />
-<h2 id="11-resume">11. Resume<a class="headerlink" href="#11-resume" title="Permanent link">&para;</a></h2>
+<h2 id="12-resume">12. Resume<a class="headerlink" href="#12-resume" title="Permanent link">&para;</a></h2>
 <p><strong>Command:</strong> <code>/reversa-resume</code></p>
 <p>Swaps the active feature with one from <code>paused-features</code>. Detects the physical stage of each paused feature, surfaces any orphaned entries (folder deleted manually) and never creates new features.</p>
 <p><strong>Produces:</strong> in-place swap of <code>active-requirements.json</code>. No feature artifacts touched.</p>
@@ -2477,9 +2507,10 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>/reversa-to-do                   # atomic actions from roadmap.md
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>/reversa-audit                   # cross-check between the three docs (read-only)
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>/reversa-coding                  # execute actions.md
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>/reversa-sync                    # converge the delivered feature into _reversa_sdd/addenda/
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>/reversa-principles              # manage durable rules
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>/reversa-resume                  # swap with a paused feature
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>/reversa-add &lt;adjustment&gt;        # short amendment on the delivered feature
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>/reversa-sync                    # converge the delivered feature into _reversa_sdd/addenda/
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>/reversa-principles              # manage durable rules
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>/reversa-resume                  # swap with a paused feature
 </code></pre></div>
 <p>Hooks declared in <code>.reversa/hooks.yml</code> (<code>before-&lt;stage&gt;</code> and <code>after-&lt;stage&gt;</code> slots) apply on every transition.</p>
 

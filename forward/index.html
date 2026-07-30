@@ -1396,6 +1396,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#reversa-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reversa-add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversa-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2387,6 +2398,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#reversa-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reversa-add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reversa-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2502,8 +2524,11 @@
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        │     actions.md  →  code, plus legacy-impact.md
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        │                             and regression-watch.md
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        ▼
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>/reversa-sync            (optional)
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>              delivery  →  _reversa_sdd/addenda/&lt;feature&gt;.md
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>/reversa-add             (optional, repeatable)
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        │     short amendment  →  spec first, then code
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        ▼
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>/reversa-sync            (optional)
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>              delivery  →  _reversa_sdd/addenda/&lt;feature&gt;.md
 </code></pre></div>
 <p><code>/reversa-forward</code> is the optional entry point for the cycle: it looks at the current state and tells you which skill to run next. Handy when you do not remember where you stopped.
 <code>/reversa-principles</code> and <code>/reversa-resume</code> run outside this linear flow. The first manages durable project rules; the second swaps the active feature with one paused on the side.</p>
@@ -2614,6 +2639,12 @@
 <td></td>
 </tr>
 <tr>
+<td><code>reversa-add</code></td>
+<td>add</td>
+<td>source code, <code>## Emendas</code> in <code>requirements.md</code> and <code>actions.md</code>, appends to <code>legacy-impact.md</code> and <code>progress.jsonl</code></td>
+<td><code>legacy-impact.md</code> (scope gate), extraction artifacts</td>
+</tr>
+<tr>
 <td><code>reversa-sync</code></td>
 <td>sync</td>
 <td><code>_reversa_sdd/addenda/&lt;feature&gt;.md</code></td>
@@ -2647,6 +2678,8 @@
 <p>Read-only cross-check between requirements, roadmap and actions. Findings are reported with severity (CRITICAL, HIGH, MEDIUM, LOW), grouped along four axes: coverage, consistency, coherence with the legacy (<code>_reversa_sdd/domain.md</code>, <code>architecture.md</code>), and sanity of the actions graph (no cycles, parallel tasks don't share files). The skill never edits the analyzed documents, even if the user asks.</p>
 <h3 id="reversa-coding"><code>reversa-coding</code><a class="headerlink" href="#reversa-coding" title="Permanent link">&para;</a></h3>
 <p>The executor. Walks <code>actions.md</code> phase by phase, respects <code>[//]</code> parallelism and dependencies, flips checkboxes from <code>[ ]</code> to <code>[X]</code> only on success, and appends one line per action to <code>progress.jsonl</code>. On completion (full or partial) it writes <code>legacy-impact.md</code> (which legacy files were touched) and <code>regression-watch.md</code> (invariants that must hold on the next Reversa extraction).</p>
+<h3 id="reversa-add"><code>reversa-add</code><a class="headerlink" href="#reversa-add" title="Permanent link">&para;</a></h3>
+<p>The amender, optional and repeatable after coding. Records a short adjustment in the active feature's spec and implements it in the same pass, spec first. Two gates run before anything is written: the size gate (no new dependency, no schema or API contract change, no new public surface, nothing in an auth, permission or payment path) and the belonging gate (the request must be about what the active feature delivered). Either gate trips and it points at <code>/reversa-requirements</code> without writing a line. Amendments carry IDs <code>E001</code>, <code>E002</code>, ... and the actions it appends are born closed <code>[X]</code>, so <code>/reversa-sync</code> never nags about finished work.</p>
 <h3 id="reversa-sync"><code>reversa-sync</code><a class="headerlink" href="#reversa-sync" title="Permanent link">&para;</a></h3>
 <p>The convergence step, optional and run after coding. Between a delivery and the next full <code>/reversa</code> re-extraction, <code>_reversa_sdd/</code> drifts: the code moved, but <code>architecture.md</code> and <code>domain.md</code> still describe the previous system. Sync distills the delivered feature into an addendum under <code>_reversa_sdd/addenda/</code>, so the extraction keeps representing the system as it is today. It detects the scenario on its own (legacy or greenfield), offers a menu instead of deciding when <code>actions.md</code> still has open actions, and never edits the original artifacts, it only points at the sections that drifted. The next full re-extraction marks the addendum as superseded.</p>
 <h3 id="reversa-principles"><code>reversa-principles</code><a class="headerlink" href="#reversa-principles" title="Permanent link">&para;</a></h3>
@@ -2678,7 +2711,7 @@
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            ├── requirements-audit.md   (reversa-quality)
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            └── cross-check.md          (reversa-audit)
 </code></pre></div>
-<p>The Code Forward Agents never touch the legacy code unsupervised; that only happens inside <code>/reversa-coding</code>, and even then the skill leaves the two trails above so the next Discovery run can detect any drift.</p>
+<p>The Code Forward Agents never touch the legacy code unsupervised; that only happens inside <code>/reversa-coding</code> and <code>/reversa-add</code>, and even then both skills leave the trails above so the next Discovery run can detect any drift.</p>
 <p><code>/reversa-sync</code> is the only skill in this Team that writes outside <code>_reversa_forward/</code>, and it writes to exactly one place:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>_reversa_sdd/
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>└── addenda/

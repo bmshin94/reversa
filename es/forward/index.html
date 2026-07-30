@@ -2195,7 +2195,10 @@
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>/reversa-coding          (ejecuta actions.md como código)
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        │
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        ▼
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>/reversa-sync            (opcional, converge la entrega en _reversa_sdd/addenda/)
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>/reversa-add             (opcional y repetible, enmienda corta: spec primero, luego código)
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        ▼
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>/reversa-sync            (opcional, converge la entrega en _reversa_sdd/addenda/)
 </code></pre></div>
 <p><code>/reversa-forward</code> es el punto de entrada opcional del ciclo: observa el estado actual y dice cuál es el próximo skill. Útil cuando no recuerdas dónde te detuviste.
 <code>/reversa-principles</code> corre separado, gestiona principios duraderos del proyecto.
@@ -2250,6 +2253,11 @@
 <td><code>reversa-coding</code></td>
 <td>coding</td>
 <td>Ejecuta <code>actions.md</code> como código real, actualiza checkboxes y deja <code>legacy-impact.md</code> y <code>regression-watch.md</code>.</td>
+</tr>
+<tr>
+<td><code>reversa-add</code></td>
+<td>add</td>
+<td>Opcional y repetible, después del coding. Enmienda corta en la feature entregada: registra en <code>## Emendas</code> en <code>requirements.md</code> e implementa en el mismo paso. Rechaza lo que exija dependencia nueva, cambio de schema o contrato, superficie pública nueva, camino de auth, o lo que esté fuera del alcance de la feature activa.</td>
 </tr>
 <tr>
 <td><code>reversa-sync</code></td>
