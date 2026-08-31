@@ -545,17 +545,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        add-agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#add-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2263,17 +2252,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        add-agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#add-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2330,7 +2308,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  ______
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  | ___ \
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  | |_/ /_____   _____ _ __ ___  __ _
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  |    // _ \ \ / / _ \ &#39;__/ __|/ _` |
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  |    // _ \ \ / / _ \ '__/ __|/ _` |
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  | |\ \  __/\ V /  __/ |  \__ \ (_| |
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  \_| \_\___| \_/ \___|_|  |___/\__,_|  by sandeco
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
@@ -2350,15 +2328,7 @@
 <li>Do not render the full selection and continue to the next question.</li>
 <li>Render a short summary, one line per team.</li>
 </ul>
-<p>The agents menu lists teams, not individual agents. The user picks at the team level; the installer expands each selected team into its agents:</p>
-<ol>
-<li><code>Reversa Agents Core</code> (rendered in gray as a separator, always installed)</li>
-<li><code>Migration Agents</code></li>
-<li><code>Code Forward Agents</code></li>
-<li><code>Pricing and Size Agents</code></li>
-<li><code>Translators N8N-&gt;Specs-&gt;Python</code> (unchecked by default)</li>
-</ol>
-<p><code>Reversa Agents Core</code> is rendered as a gray, non-selectable separator that visually shows <code>(*)</code> as if it were a checked-and-disabled item: the user sees it, knows it is included, and the cursor skips over it. It contains all discovery agents (Reversa, Scout, Soul Extractor, Archaeologist, Detective, Architect, Writer, Reviewer, Visor, Data Master, Design System, Agents Help, Reconstructor), so the previous "Discovery Add-ons" group no longer exists as a separate concept. Even though the menu hides the agent-level detail, the final installation summary still breaks the count down by team (Discovery, Migration, Code Forward, New Project, Documentation, Translators and Pricing).</p>
+<p>There is no agent selection: the installer always installs <strong>all</strong> agents shipped with the package. The final installation summary breaks the count down by team (Discovery, Migration, Code Forward, New Project, Documentation, Translators and Pricing).</p>
 <hr />
 <h3 id="status"><code>status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>status
@@ -2369,21 +2339,16 @@
 <h3 id="update"><code>update</code><a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>update
 </code></pre></div>
-<p>Updates agents to the latest version of Reversa.</p>
+<p>Updates everything to the latest version of Reversa: all agents shipped with the package are reinstalled, including agents that didn't exist when you first installed.</p>
 <p>The command is smart: it checks the SHA-256 manifest of each file and never overwrites files you've customized. If you made adjustments to any agent, they stay intact.</p>
 <hr />
-<h3 id="add-agent"><code>add-agent</code><a class="headerlink" href="#add-agent" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>add-agent
-</code></pre></div>
-<p>Adds a specific agent to the project. Useful if you didn't install all agents during the initial installation and now want to include, for example, Data Master or Design System.</p>
-<hr />
 <h3 id="add-engine"><code>add-engine</code><a class="headerlink" href="#add-engine" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>add-engine
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>add-engine
 </code></pre></div>
 <p>Adds support for an AI engine that wasn't present when you installed. For example: you installed only for Claude Code and now want to add Codex.</p>
 <hr />
 <h3 id="uninstall"><code>uninstall</code><a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>uninstall
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npx<span class="w"> </span>reversa<span class="w"> </span>uninstall
 </code></pre></div>
 <p>Removes Reversa from the project: deletes the files created by the installation (<code>.reversa/</code>, <code>.agents/skills/reversa-*/</code>, engine entry files).</p>
 <div class="admonition info">
