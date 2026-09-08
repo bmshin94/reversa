@@ -614,6 +614,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hermes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hermes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cline-e-roo-code" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2310,6 +2321,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hermes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hermes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cline-e-roo-code" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2447,6 +2469,12 @@
 <td><code>reversa</code></td>
 </tr>
 <tr>
+<td><strong>Hermes</strong></td>
+<td><code>AGENTS.md</code></td>
+<td><code>.agents/skills/reversa-*/</code></td>
+<td><code>reversa</code></td>
+</tr>
+<tr>
 <td><strong>Cline</strong></td>
 <td><code>.clinerules</code></td>
 <td><code>.agents/skills/reversa-*/</code></td>
@@ -2499,6 +2527,10 @@
 <hr />
 <h2 id="opencode">Opencode<a class="headerlink" href="#opencode" title="Permanent link">&para;</a></h2>
 <p>Agente de codificação open source para terminal (SST). Lê <code>AGENTS.md</code> nativamente, mesma convenção do Codex. Comando CLI: <code>opencode</code>. Como Codex, a ativação é pelo nome do agente: <code>reversa</code>.</p>
+<hr />
+<h2 id="hermes">Hermes<a class="headerlink" href="#hermes" title="Permanent link">&para;</a></h2>
+<p>Agente pessoal para terminal (Python). Lê <code>AGENTS.md</code> nativamente, mesmo arquivo do Codex. Comando CLI: <code>hermes</code>. A ativação é pelo nome do agente: <code>reversa</code>.</p>
+<p>O Hermes só descobre skills na casa dele (<code>~/.hermes/skills/</code>), nunca no projeto, então ele chega nos agentes do Reversa pelo caminho citado no <code>AGENTS.md</code> (<code>.agents/skills/reversa/SKILL.md</code>), e não por descoberta automática. Para tê-los como slash commands nativos (<code>/reversa</code>), acrescente o <code>.agents/skills</code> do projeto em <code>skills.external_dirs</code> no <code>config.yaml</code> do Hermes, usando caminho <strong>absoluto</strong> (entradas relativas resolvem contra o <code>HERMES_HOME</code>, não contra o projeto). O instalador não mexe nesse arquivo.</p>
 <hr />
 <h2 id="cline-e-roo-code">Cline e Roo Code<a class="headerlink" href="#cline-e-roo-code" title="Permanent link">&para;</a></h2>
 <p>Extensions de VS Code com suporte a regras personalizadas via <code>.clinerules</code> e <code>.roorules</code> respectivamente. O padrão é idêntico ao Cursor e Windsurf: arquivo de regras na raiz do projeto que instrui o agente ao ativar <code>/reversa</code>.</p>
